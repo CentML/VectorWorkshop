@@ -10,10 +10,10 @@ echo CUDA  : `which nvcc`: `nvcc --version`
 echo Python: `which python`: `python --version`
 
 # Install skyline
-python3 -m venv $HOME/ml_tools
-source $HOME/cenml_tools/bin/activate
+python3 -m venv $HOME/centml_tools
+source $HOME/centml_tools/bin/activate
 
-cd $HOME/cenml_tools/
+cd $HOME/centml_tools/
 
 # Skyline
 git clone https://github.com/centml/skyline.git
