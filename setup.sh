@@ -10,7 +10,6 @@ nvidia-smi
 python3 -m venv $HOME/centml_tools
 module unload  anaconda/3.9
 source $HOME/centml_tools/bin/activate
-echo CUDA  : `which nvcc`: `nvcc --version`
 echo Python: `which python`: `python --version`
 
 cd $HOME/centml_tools/
