@@ -29,6 +29,7 @@ cd ./project
 curl http://centml-releases.s3-website.us-east-2.amazonaws.com/skyline-vscode/skyline-vscode-0.0.1.vsix --output skyline-vscode-0.0.1.vsix
 #code-server --install-extension skyline-vscode-0.0.1.vsix
 
+skyline interactive &
 code-server 
 
 
