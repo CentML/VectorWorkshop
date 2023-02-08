@@ -25,8 +25,7 @@ pip install http://centml-releases.s3-website.us-east-2.amazonaws.com/habitat/wh
 
 # Visual Studio Extention
 # Start code server
-git clone git@github.com:CentML/VectorWorkshop.git
-cd VectorWorkshop/project
+cd ./project
 curl http://centml-releases.s3-website.us-east-2.amazonaws.com/skyline-vscode/skyline-vscode-0.0.1.vsix --output skyline-vscode-0.0.1.vsix
 #code-server --install-extension skyline-vscode-0.0.1.vsix
 
