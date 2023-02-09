@@ -21,11 +21,12 @@ pip install torch torchvision  --no-cache-dir --extra-index-url https://download
 pip install ipywidgets==7.7.1 jupyter jupyterlab notebook torch_tb_profiler
 
 
-git clone https://github.com/NVIDIA/apex
-cd apex
-export CUDA_HOME=/pkgs/cuda-11.6/
-pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
-cd ../
+#git clone https://github.com/NVIDIA/apex
+#cd apex
+#export CUDA_HOME=/pkgs/cuda-11.6/
+#pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
+#cd ../
+tar xf apex.tar.gz -C $LOCAL/centml_tools/lib/python3.9/site-packages/
 
 # Skyline
 git clone https://github.com/centml/skyline.git
