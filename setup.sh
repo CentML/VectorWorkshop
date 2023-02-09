@@ -12,7 +12,7 @@ LOCAL=${1:-$PWD}
 echo workshop location $LOCAL
 # Install skyline
 python3 -m venv $LOCAL/centml_tools
-cd $LOCAL/centml_tools
+pushd $LOCAL/centml_tools
 module unload  anaconda/3.9
 source $LOCAL/centml_tools/bin/activate
 echo Python: `which python`: `python --version`
@@ -20,13 +20,14 @@ echo Python: `which python`: `python --version`
 pip install torch torchvision  --no-cache-dir --extra-index-url https://download.pytorch.org/whl/cu116
 pip install ipywidgets==7.7.1 jupyter jupyterlab notebook torch_tb_profiler
 
-
 #git clone https://github.com/NVIDIA/apex
 #cd apex
 #export CUDA_HOME=/pkgs/cuda-11.6/
 #pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
 #cd ../
+popd
 tar xf apex.tar.gz -C $LOCAL/centml_tools/lib/python3.9/site-packages/
+pushd
 
 # Skyline
 git clone https://github.com/centml/skyline.git
@@ -45,4 +46,5 @@ curl http://centml-releases.s3-website.us-east-2.amazonaws.com/skyline-vscode/sk
 skyline interactive  & #--port $port &
 code-server --disable-telemetry --accept-server-license-terms --server-data-dir ./vscode_data 
 
+popd
 
