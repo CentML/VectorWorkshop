@@ -22,7 +22,8 @@ pip install ipywidgets jupyterlab notebook
 git clone https://github.com/NVIDIA/apex
 cd apex
 export CUDA_HOME=/pkgs/cuda-11.6/
-pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cuda_ext"  --global-option="--deprecated_fused_adam" ./
+pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
+cd ../
 
 # Skyline
 git clone https://github.com/centml/skyline.git

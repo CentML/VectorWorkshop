@@ -9,7 +9,7 @@ You can find workshop slides at [here](slides/CentML-Vector.pdf).
 
 First, acquire a GPU interactive session
 ```bash
-srun --gres=gpu:1 -c 8 --mem 16G --pty bash
+srun --gres=gpu:1 -c 8 --mem 16G -p t4v2 --pty bash
 ```
 
 Clone this repository
