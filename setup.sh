@@ -8,7 +8,8 @@ module load vscode-server/20220909
 
 nvidia-smi
 
-LOCAL=/tmp
+LOCAL=${1:-$PWD}
+echo workshop location $LOCAL
 # Install skyline
 python3 -m venv $LOCAL/centml_tools
 cd $LOCAL/centml_tools
