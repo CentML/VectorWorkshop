@@ -17,7 +17,8 @@ source $LOCAL/centml_tools/bin/activate
 echo Python: `which python`: `python --version`
 
 pip install torch torchvision  --no-cache-dir --extra-index-url https://download.pytorch.org/whl/cu116
-pip install ipywidgets jupyterlab notebook
+pip install ipywidgets==7.7.1 jupyter jupyterlab notebook torch_tb_profiler
+
 
 git clone https://github.com/NVIDIA/apex
 cd apex
