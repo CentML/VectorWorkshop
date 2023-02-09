@@ -22,7 +22,7 @@ pip install ipywidgets jupyterlab notebook
 git clone https://github.com/NVIDIA/apex
 cd apex
 export CUDA_HOME=/pkgs/cuda-11.6/
-pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
+pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" --global-option="--deprecated_fused_adam" ./
 
 # Skyline
 git clone https://github.com/centml/skyline.git
@@ -33,14 +33,12 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/pkgs/cuda-11.6/extras/CUPTI/lib64/
 pip install http://centml-releases.s3-website.us-east-2.amazonaws.com/habitat/wheels-cu116/habitat_predict-1.0.0-0+cu116-py39-none-any.whl
 
 # Visual Studio Extention
-cd ./project
 curl http://centml-releases.s3-website.us-east-2.amazonaws.com/skyline-vscode/skyline-vscode-0.0.1.vsix --output skyline-vscode-0.0.1.vsix
 
 # Start code server
 #port=$(python -c "import socket;s = socket.socket(socket.AF_INET, socket.SOCK_STREAM);s.bind(('', 0));addr = s.getsockname();print(addr[1]);s.close()")
 
 skyline interactive  & #--port $port &
-code-server 
-
+code-server --disable-telemetry --server-data-dir ./vscode_data 
 
 
