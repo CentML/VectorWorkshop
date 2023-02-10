@@ -2,7 +2,7 @@
 
 This repository contains the artifacts for the workshop that CentML team ran at the Vector Institute on Feb 10th, 2023.
 
-You can find workshop slides at [here](Vector-Workshop-Feb-10.pdf.pdf).
+You can find workshop slides at [here](Vector-Workshop-Feb-10.pdf).
 
 
 ## Setting up skyline on Vector's GPU cluster
